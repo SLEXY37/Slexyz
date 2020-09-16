@@ -1,0 +1,51 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block css  %}
+<link rel="stylesheet" href="{% static "css/contact.css" %}">
+{% endblock %}
+
+{% block title %}
+<title>Contact</title>
+{% endblock %}
+
+{% block scripts %}
+<script defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMgo-9nMOxw237P-8HCIcTuiqW-D9yQHE&callback=initMap">
+</script>
+<script  src="{% static "javascript/contact.js" %}"></script>
+{% endblock %}
+    {% block content %}
+    <div id="contact-cont">
+      <div  id="map">
+      </div>
+      <div id="contact">
+          <h1>CONTACT US <br> <span>WE ARE READY TO LEAD YOU INTO THE FUTURE</span></h1>
+          <form id="contact-imput" method="POST" class="myform">>
+          {% csrf_token %}
+              {{form.from_email}}
+              {{form.name}}
+              {{form.subject}}
+              {{form.message}}
+            <input type="submit" value="SUBMIT" action="">
+          </form>
+          {% if messages %}
+    {% for message in messages %}
+     {% if message.tags %}
+     <script>
+       setTimeout(function(){ alert("{{ message }}"); }, 1500);
+     </script> {% endif %}
+
+    {% endfor %}
+
+{% endif %}
+    </div>
+    </div>
+    {% endblock %}
+
+
+    <form id="contact-imput" method="POST">
+    {% csrf_token %}
+    {{form}}
+
+    </form>

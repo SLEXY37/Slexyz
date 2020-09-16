@@ -1,0 +1,185 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+{% endblock %}
+
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="{% static "javascript/main.js" %}"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+// Optional parameters
+direction: 'horizontal',
+loop: true,
+
+// If we need pagination
+pagination: {
+el: '.swiper-pagination',
+type: 'fraction',
+},
+
+// Navigation arrows
+navigation: {
+nextEl: '.swiper-button-next',
+prevEl: '.swiper-button-prev',
+},
+
+})
+
+
+</script>
+{% endblock %}
+    {% block content%}
+    <div id="arrow-container" class="red">
+        <div id="up-arrow"></div>
+    </div>
+    <div id="container">
+        <div id="main-part">
+            <div id="sub-header">
+                <h1>Tires offer a great <br> aerobic work out!</h1>
+                <input type="button" value="Learn more" id="more" class="button">
+            </div>
+        </div>
+
+        <section id="client-servicies">
+            <div id="client-container">
+                <div id="client-title">
+                    <h2>WHAT WE OFFER FOR OUR CLIENTS</h2>
+                    <h3>OUR SERVICIES</h3>
+                </div>
+
+                <div id="client-section">
+                    <div class="card left">
+                        <div class="card-img">
+                            <img loading="lazy" src="{% static "images/card/pexels-cleyder-duque-3621731.jpg" %}" alt="">
+                        </div>
+
+                        <div class="card-text">
+                            <h6>CROSSFIT</h6>
+                            <p>Completely formulate multimedia based markets after error-free synergy. Quickly deliver progressive paradigms without inexpensive infrastructures. Enthusiastically e-enable cutting-edge technology through equity invested infrastructures. Continually synthesize empowered convergence rather than client-centric architectures. Collaboratively recaptiualize resource maximizing solutions without revolutionary relationships.</p>
+                        </div>
+                    </div>
+
+                    <div class="card left">
+                        <div class="card-img">
+                            <img loading="lazy" src="{% static "images/card/pexels-cliff-booth-4057843.jpg" %}" alt="">
+                        </div>
+
+                        <div class="card-text">
+                            <h6>YOGA CLASSES</h6>
+                            <p>Phosfluorescently engage backend e-services after diverse users. Collaboratively harness empowered portals whereas effective information. Holisticly develop high-quality initiatives through enabled architectures. Interactively extend enterprise-wide. Phosfluorescently engage backend e-services after diverse users. Collaboratively harness empowered portals whereas effective information. Holisticly develop high-quality initiatives through enabled architectures.…</p>
+                        </div>
+                    </div>
+
+                    <div class="card right">
+                        <div class="card-img">
+                            <img loading="lazy" src="{% static "images/card/pexels-francesco-ungaro-2289412.jpg" %}" alt="">
+                        </div>
+
+                        <div class="card-text">
+                            <h6>SWIMMING CLASSES</h6>
+                            <p>Uniquely actualize fully tested process improvements with performance based portals. Seamlessly syndicate high-quality infomediaries for premium manufactured products. Uniquely whiteboard tactical best practices whereas bleeding-edge process improvements. Completely maintain best-of-breed applications for adaptive web-readiness. Proactively actualize progressive products without effective outsourcing.</p>
+                        </div>
+                    </div>
+
+                    <div class="card right">
+                        <div class="card-img">
+                            <img  loading="lazy" src="{% static "images/card/pexels-leon-martinez-2468366.jpg" %}" alt="">
+                        </div>
+
+                        <div class="card-text">
+                            <h6>CARDIO</h6>
+                            <p>Continually myocardinate performance based results with cost effective synergy. Completely plagiarize sticky metrics via cooperative relationships. Assertively maintain B2B convergence after multimedia based web services. Monotonectally .Continually myocardinate performance based results with cost effective synergy. Completely plagiarize sticky metrics via cooperative relationships. Assertively maintain B2B…</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <div id="opinions">
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Continually myocardinate performance based results with cost effective synergy. Completely plagiarize sticky metrics via cooperative relationships <br> <span class="red">LUISE FISY</span> <br><span>CCO</span></div>
+                    <div class="swiper-slide">Continually myocardinate performance based results with cost effective synergy. Completely plagiarize sticky metrics via cooperative relationships <br> <span class="red">LUISE FISY</span> <br><span>CCO</span></div>
+                    <div class="swiper-slide">Continually myocardinate performance based results with cost effective synergy. Completely plagiarize sticky metrics via cooperative relationships <br> <span class="red">LUISE FISY</span> <br> <span>CCO</span></div>
+                </div>
+                <!-- If we need pagination -->
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev swiper-button-white swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+
+                <!-- If we need scrollbar -->
+            </div>
+        </div>
+
+        <div id="news-letter">
+            <div id="foo-container">
+                <div id="f-title">
+                    <h3>STAY UPDATED WITH NEWS SUBSCRIBE TO OUR NEWSLETTER</h3>
+                </div>
+
+
+
+
+                <div>
+
+
+                                    <!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:transparent; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://gmail.us17.list-manage.com/subscribe/post?u=6527c2082533920e978b41b46&amp;id=e0427ad89d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+
+<div class="mc-field-group" style="width: 100%; display: flex; flex-direction: column; justify-content: center;">
+    <div id="inputs-form">
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Write your email...">
+        <div class="clear" style="flex: 1;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button-1" style="border: 0; width: 140px;"> </div>
+    </div>
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none; display: flex; flex-direction: column; align-items: center; justify-content: center;"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6527c2082533920e978b41b46_e0427ad89d" tabindex="-1" value=""></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+
+
+
+                </div>
+
+
+
+
+            </div>
+            <div id="opacity">
+                <img loading="lazy" src="{% static "images/pexels-leon-martinez-1552242.jpg" %}"} alt="">
+            </div>
+        </div>
+      </div>
+
+
+    {% endblock %}

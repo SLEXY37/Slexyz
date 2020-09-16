@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% block title %}
+    <title>Home</title>
+     {% endblock %}
+    <link rel="stylesheet" href="{% static "css/hamburger.css" %}">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    {% block css %}
+
+    <!-- some default content here -->
+
+    {% endblock %}
+  </head>
+  <body>
+
+            <header id="head-container">
+                <div id="logo">
+                    <img src="{% static "images/logo/94122034-cc30-4385-bd97-58ed5eced93f_200x200.png" %}" id="logo-img" alt="">
+                </div>
+                <ul id="list">
+                    <li><a href="http://127.0.0.1:8000" id="home" onclick="toggleClass(this)" class="class2">HOME</a></li>
+                    <li><a href="http://127.0.0.1:8000/#client-servicies" onclick="toggleClass(this)" id="servicies">SERVICIES</a></li>
+                    <li><a href="/contact" onclick="toggleClass(this)" id="contact-char">CONTACT US</a></li>
+                </ul>
+                <button class="hamburger hamburger--slider" type="button" id="hamburgers">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
+            </header>
+    {% block content %}
+
+    {% endblock %}
+
+              <footer>
+                <div id="f-1">
+                    <div class="border">
+
+                    </div>
+
+                    <div id="social-net">
+                      <a href="https://www.facebook.com"><img loading="lazy" src="{% static "images/icons/facebook.png" %}" alt="img" ></a>
+                      <a href="https://www.twitter.com"><img loading="lazy" src="{% static "images/icons/twitter.png"  %}" alt="img"></a>
+                      <a href="https://www.youtube.com"><img loading="lazy" src="{% static "images/icons/youtube.png" %}" alt="img"></a>
+                      <a href="https://www.instagram.com"><img loading="lazy" src="{% static "images/icons/instagram.png" %}" alt="img"></a>
+                    </div>
+
+                    <div class="border">
+
+                    </div>
+                </div>
+                <div>
+                    <h6>THEME BY DENIS</h6>
+                </div>
+              </footer>
+
+              {% block scripts %}
+
+              {% endblock %}
+              <script  src="{% static "javascript/header.js" %}"></script>
+  </body>
+</html>
